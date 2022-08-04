@@ -1,0 +1,66 @@
+/*** WRAPPER ELEMENT ***/
+
+#wpcontent {
+  background-color: var(--bs-light);
+}
+.bstg_settings {
+  padding: 80px;
+  max-width: 100%;
+  position: relative;
+}
+
+/*** ACCORDION WRAPPER STYLES ***/
+.bstg_accordion_wrapper {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--bs-white);
+  border-top-width: 50px !important;
+  border-top-color: var(--bs-primary) !important;
+}
+
+/*** ACCORDION HEADER STYLES ***/
+.bstg_accordion_wrapper .rwmb-group-title-wrapper,
+.bstg_accordion_wrapper .rwmb-group-toggle-handle {
+  color: var(--bs-white);
+  top: -50px;
+  height: 50px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.bstg_accordion_wrapper .rwmb-group-toggle-handle {
+  padding-left: 0px;
+}
+.bstg_accordion_wrapper .rwmb-group-toggle-indicator:before {
+  color: var(--bs-white);
+}
+
+/*** ACCORDION BODY STYLES ***/
+
+.bstg_accordion_wrapper > .rwmb-input {
+  padding: 40px;
+}
+.rwmb-group-collapsible.rwmb-group-collapsed > .rwmb-input {
+  padding: 0px;
+}
+
+.custom-submit input {
+  color: var(--bs-white);
+  background-color: var(--bs-primary);
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+  width: auto !important;
+  padding: 20px;
+}
+
+.custom-submit input:hover {
+  color: var(--bs-white);
+  background-color: var(--bs-primary);
+}
+
+.submit {
+  display: none;
+}
