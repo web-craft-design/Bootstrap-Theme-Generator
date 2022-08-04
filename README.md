@@ -5,7 +5,7 @@ Bootstrap Theme Generator enables you to choose which components of Bootstrap yo
 - You'll need the [Metabox-Plugin](https://metabox.io/) for the Bootstrap-Theme-Generator to run!
     - There are currently no checks performed if that plugin is installed. So make sure that you install it beforehand
     - I'm probably gonna add MetaBox through their Composer Package in the future, but that isn't available inside of the plugin yet
-
+- Currently untested plugin, although I performed some Tests if everything works properly with my environment unfortunately that doesn't mean that everything will work on your side, so please feel free to report any bugs (wolfgang@web-craft.design or here on github)
 
 
 # Steps to take
