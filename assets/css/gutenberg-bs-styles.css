@@ -1,0 +1,64 @@
+
+    .has-primary-color{
+        color: #dd00da;
+    }
+    .has-primary-background-color{
+        background-color: #dd00da;
+    }
+    
+    .has-secondary-color{
+        color: #1f1f25;
+    }
+    .has-secondary-background-color{
+        background-color: #1f1f25;
+    }
+    
+    .has-white-color{
+        color: #FFFFFF;
+    }
+    .has-white-background-color{
+        background-color: #FFFFFF;
+    }
+    
+    .has-light-color{
+        color: #f8f9fa;
+    }
+    .has-light-background-color{
+        background-color: #f8f9fa;
+    }
+    
+    .has-dark-color{
+        color: #343a40;
+    }
+    .has-dark-background-color{
+        background-color: #343a40;
+    }
+    
+    .has-warning-color{
+        color: #07ff0b;
+    }
+    .has-warning-background-color{
+        background-color: #07ff0b;
+    }
+    
+    .has-success-color{
+        color: #28a745;
+    }
+    .has-success-background-color{
+        background-color: #28a745;
+    }
+    
+    .has-danger-color{
+        color: #dc3545;
+    }
+    .has-danger-background-color{
+        background-color: #dc3545;
+    }
+    
+    .has-info-color{
+        color: #17a2b8;
+    }
+    .has-info-background-color{
+        background-color: #17a2b8;
+    }
+    

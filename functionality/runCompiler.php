@@ -5,18 +5,16 @@ use ScssPhp\ScssPhp\OutputStyle;
 
 
 
-
 add_action('rwmb_bstg_settingfields_colors_after_save_post', 'compileBootstrap');
 
-
-
 function compileBootstrap() {
-
+    $bstg = new HelperFunctions;
     //Add compiler (scssphp)
     require_once(BSTG_PLUGINPATH . 'inc/compiler/scss.inc.php');
     $compiler = new \ScssPhp\ScssPhp\Compiler;
 
     // OUTPUT-STYLE
+
     $compiler->setOutputStyle(OutputStyle::COMPRESSED);
     // or OutputStyle::EXPANDED
 
@@ -26,7 +24,7 @@ function compileBootstrap() {
     $stringToCompile = '';
     $stringToCompile .= '@import "functions";';
 
-    $stringToCompile .= get_color_pairs();
+    $stringToCompile .= $bstg->get_color_pairs();
 
     $stringToCompile .= '
     /*** REQUIRED ***/
@@ -49,23 +47,19 @@ function compileBootstrap() {
     @import "helpers";
     @import "type";
 
-
-
     ';
 
 
     // LOAD SELECTED COMPONENTS (for a list of available components see: @/inc/metabox/mbCallbacks )
-    $stringToCompile .= get_components_imports();
-
-
+    $stringToCompile .= $bstg->get_components_imports();
 
 
     $compiledString = $compiler->compileString($stringToCompile)->getCss();
 
 
-
     //Define the path of the output-file
     $path = BSTG_PLUGINPATH . 'assets/css/bootstrap.css';
+
 
     //opens the file
     $file = fopen($path, "w");
