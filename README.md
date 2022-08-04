@@ -2,7 +2,7 @@
 Bootstrap Theme Generator enables you to choose which components of Bootstrap you want to load. It also gives you the possibility to change the colors (and all generated shades) of your current Bootstrap Theme. All you need to do is using the predefined color-pickers. That gives you the power to change Bootstraps appearance on any live-site without uploading/changing/touching any files!
 
 # Prerequisites
-- You'll need the [Metabox-Plugin](https://metabox.io/) for that plugin to run
+- You'll need the [Metabox-Plugin](https://metabox.io/) for the Bootstrap-Theme-Generator to run!
     - There are currently no checks performed if that plugin is installed. So make sure that you install it beforehand
     - I'm probably gonna add MetaBox through their Composer Package in the future, but that isn't available inside of the plugin yet
 
