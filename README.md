@@ -17,6 +17,9 @@ To make the plugin compile Bootstrap in your preferred setup you need to check t
 
 # What does this plugin do?
 
+## Conditional Compiling of Bootstrap Components
+You don't need all BS-Components? No Problem, you can tick on/off any components you (don't) need and the CSS file will regenerate with the new parameters. Leads to a smaller CSS-File in overall.
+
 ## Gutenberg - Bootstrap Color Sync!!!
 Syncs the Gutenberg Color Palette with the predefined Bootstrap Colors. They stay in sync (also on Frontend) even if you update the colors!
 
