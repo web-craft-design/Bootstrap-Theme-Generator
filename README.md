@@ -7,6 +7,8 @@ Bootstrap Theme Generator enables you to choose which components of Bootstrap yo
     - I'm probably gonna add MetaBox through their Composer Package in the future, but that isn't available inside of the plugin yet
 - Currently untested plugin, although I performed some Tests if everything works properly with my environment unfortunately that doesn't mean that everything will work on your side, so please feel free to report any bugs (wolfgang@web-craft.design or here on github)
 
+- When using the plugin with themes generated in PG, add Do not Enqueue action on bootstrap CSS and JS resources, because the plugin enqueues them for you.
+
 
 # Steps to take
 
