@@ -3,7 +3,7 @@
 Plugin Name:	Bootstrap Theme Generator
 Plugin URI:		https://web-craft.design
 Description:	Theme Generator für Bootstrap, erzeugt eine kompilierte CSS Datei anhand der vorgegebenen Einstellungen
-Version:		1.0.0
+Version:		1.0.1
 Author:			Wolfgang Hartl | web-craft.design
 Author URI:		https://web-craft.design
 License:		GPL-2.0+

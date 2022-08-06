@@ -28,3 +28,7 @@ There is also an option to load bootstrap additionally inside of Gutenberg. You 
 ## Compiles SCSS-File
 All the SCSS Files of Bootstrap get compiled into one usable CSS file. The CSS File gets enqueued on the frontend automatically and optionally also in Gutenberg!
 
+
+# Changelog
+## 1.0.1
+- Fixed a Bug which caused an error message when no setting was initially set at "Enqueue Bootstrap Javascript Files"!
