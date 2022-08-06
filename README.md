@@ -7,6 +7,8 @@ Bootstrap Theme Generator enables you to choose which components of Bootstrap yo
     - I'm probably gonna add MetaBox through their Composer Package in the future, but that isn't available inside of the plugin yet
 - Currently untested plugin, although I performed some Tests if everything works properly with my environment unfortunately that doesn't mean that everything will work on your side, so please feel free to report any bugs (wolfgang@web-craft.design or here on github)
 
+- When using the plugin with themes generated in PG, add Do not Enqueue action on bootstrap CSS and JS resources, because the plugin enqueues them for you.
+
 
 # Steps to take
 
@@ -16,6 +18,9 @@ To make the plugin compile Bootstrap in your preferred setup you need to check t
 
 
 # What does this plugin do?
+
+## Conditional Compiling of Bootstrap Components
+You don't need all BS-Components? No Problem, you can tick on/off any components you (don't) need and the CSS file will regenerate with the new parameters. Leads to a smaller CSS-File in overall.
 
 ## Gutenberg - Bootstrap Color Sync!!!
 Syncs the Gutenberg Color Palette with the predefined Bootstrap Colors. They stay in sync (also on Frontend) even if you update the colors!
