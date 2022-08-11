@@ -13,4 +13,4 @@ add_action('wp_enqueue_scripts', function () {
     foreach ($settings['enqueue_bs_js'] as $option) {
         if ($option == 'frontend') wp_enqueue_script('bootstrapJS');
     }
-});
+}, 999);

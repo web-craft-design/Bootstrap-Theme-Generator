@@ -11,4 +11,4 @@ add_action('enqueue_block_editor_assets', function () {
     foreach ($settings['enqueue_bs_js'] as $option) {
         if ($option == 'backend') wp_enqueue_script('bootstrapJS');
     }
-}, 999999);
+}, 99);
