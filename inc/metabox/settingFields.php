@@ -54,8 +54,33 @@ function components_functionality() {
 }
 
 
+function bootstrap_cpt(){
+    $args = [
+        'public' => true,
+        //'_builtin' => false,
+        //'publicly_queryable' => true,
+    ];
+
+    $post_types = get_post_types($args);
 
 
+
+    return $post_types;
+}
+//bootstrap_cpt();
+
+
+function bootstrap_pages(){
+    $args = [];
+
+    $pages = get_pages($args);
+    $returnArray = [];
+    foreach ($pages as $page){
+        $returnArray[$page->ID] = $page->post_name;
+    }
+
+    return $returnArray;
+}
 
 
 /*** REGISTER THE FIELDS! ****/
@@ -79,28 +104,59 @@ function bstg_register_setting_fields($meta_boxes) {
                 'class'         => 'bstg_accordion_wrapper',
                 'fields'        => [
                     [
+                        'name' => __('Use Bootstrap everywhere on Frontend?', 'bstg'),
+                        'id' => $prefix . 'bs_globally',
+                        'type' => 'switch',
+                        'style' => 'rounded',
+                        'std' => true,
+                    ],
+                    [
+                        'name' => __('Select CPTs where Bootstrap should be loaded', 'bstg'),
+                        'id' => $prefix . 'bs_cpt_selection',
+                        'type' => 'select_advanced',
+                        'options' => bootstrap_cpt(),
+                        'multiple'        => true,
+                        'select_all_none' => true,
+                        'visible'     => [
+                            'when'     => [['bs_globally', '=', 0]],
+                            'relation' => 'or',
+                        ],
+
+                    ],
+                    [
+                        'name' => __('Load Bootstrap on every Page?', 'bstg'),
+                        'id' => $prefix . 'bs_pages_globally',
+                        'type' => 'switch',
+                        'style' => 'rounded',
+                        'std' => true,
+                        'visible'     => [
+                            'when'     => [['bs_globally', '=', 0]],
+                            'relation' => 'or',
+                        ],
+                    ],
+                    [
+                        'name' => __('Select Pages where Bootstrap should be loaded', 'bstg'),
+                        'id' => $prefix . 'bs_pages_selection',
+                        'type' => 'select_advanced',
+                        'options' => bootstrap_pages(),
+                        'multiple'        => true,
+                        'select_all_none' => true,
+                        'visible'     => [
+                            'when'     => [['bs_pages_globally', '=', 0]],
+                            'relation' => 'or',
+                        ],
+
+                    ],
+
+
+                    [
                         'name'  => __('Enqueue Bootstrap inside of Gutenberg?', 'bstg'),
                         'id'    => $prefix . 'enqueue_bs_in_gb',
                         'type'  => 'switch',
                         'style' => 'rounded',
                         'std'   => true,
                     ],
-                    [
-                        'name'            => __('Where to enqueue Bootstraps\' Javascript File', 'bstg'),
-                        'id'              => $prefix . 'enqueue_bs_js',
-                        'type'            => 'select_advanced',
-                        'options'         => [
-                            'backend'  => __('Gutenberg', 'bstg'),
-                            'frontend' => __('Frontend', 'bstg'),
-                        ],
-                        'multiple'        => true,
-                        'select_all_none' => true,
-                        'tooltip'         => [
-                            'icon'     => '',
-                            'position' => 'top',
-                            'content'  => 'bootstrap.min.js',
-                        ],
-                    ],
+
                 ],
             ],
             [

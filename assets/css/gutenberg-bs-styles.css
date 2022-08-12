@@ -1,16 +1,16 @@
 
         .has-primary-color{
-            color: #fddd06;
+            color: #3f00b5;
         }
         .has-primary-background-color{
-            background-color: #fddd06;
+            background-color: #3f00b5;
         }
         
         .has-secondary-color{
-            color: #6c757d;
+            color: #1f1f25;
         }
         .has-secondary-background-color{
-            background-color: #6c757d;
+            background-color: #1f1f25;
         }
         
         .has-white-color{
@@ -28,10 +28,10 @@
         }
         
         .has-dark-color{
-            color: #212529;
+            color: #343a40;
         }
         .has-dark-background-color{
-            background-color: #212529;
+            background-color: #343a40;
         }
         
         .has-warning-color{
@@ -42,10 +42,10 @@
         }
         
         .has-success-color{
-            color: #198754;
+            color: #28a745;
         }
         .has-success-background-color{
-            background-color: #198754;
+            background-color: #28a745;
         }
         
         .has-danger-color{
@@ -56,9 +56,9 @@
         }
         
         .has-info-color{
-            color: #0dcaf0;
+            color: #17a2b8;
         }
         .has-info-background-color{
-            background-color: #0dcaf0;
+            background-color: #17a2b8;
         }
         

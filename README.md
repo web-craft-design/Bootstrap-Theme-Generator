@@ -35,5 +35,8 @@ All the SCSS Files of Bootstrap get compiled into one usable CSS file. The CSS F
 
 
 # Changelog
+## 1.1.0
+- Added way more granular Control on where to load Bootstrap and where not!
+
 ## 1.0.1
 - Fixed a Bug which caused an error message when no setting was initially set at "Enqueue Bootstrap Javascript Files"!

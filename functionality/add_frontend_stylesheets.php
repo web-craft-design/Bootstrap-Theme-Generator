@@ -1,16 +1,46 @@
 <?php
 //FRONTEND STYLES:
-add_action('wp_enqueue_scripts', function () {
-    $bstg = new HelperFunctions;
+function enq_styles(){
+   wp_enqueue_style('bootstrap');
+   wp_enqueue_style('gutenberg-bs-styles');
+   wp_enqueue_script('bootstrapJS');
+}
 
+
+add_action('wp_head', function() {
+    $bstg = new HelperFunctions;
     $settings = $bstg->getOptionsByGroupName('general_settings');
 
-    wp_enqueue_style('bootstrap');
-    wp_enqueue_style('gutenberg-bs-styles');
 
-    if (!isset($settings['enqueue_bs_js'])) return;
-
-    foreach ($settings['enqueue_bs_js'] as $option) {
-        if ($option == 'frontend') wp_enqueue_script('bootstrapJS');
+    // Load Bootstrap Globally, everywhere on Frontend!
+    if ( isset($settings['bs_globally']) && $settings['bs_globally'] ){
+        enq_styles();
+        return;
     }
-}, 999);
+
+
+    // Load Bootstrap on chosen CPTs
+    if ( isset($settings['bs_cpt_selection']) && $settings['bs_cpt_selection'] ){
+        if (in_array(get_post_type(), $settings['bs_cpt_selection']) ){
+            enq_styles();
+        }
+    }
+
+    if ( isset($settings['bs_pages_globally']) && $settings['bs_pages_globally'] ){
+        if (get_post_type() == 'page'){
+            enq_styles();
+            return;
+        }
+    }
+
+
+    if ( isset($settings['bs_pages_selection']) && $settings['bs_pages_selection'] ){
+        global $post;
+        if (in_array($post->ID, $settings['bs_pages_selection'])){
+            enq_styles();
+            return;
+        }
+
+    }
+
+}, 9999);
